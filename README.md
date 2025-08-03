@@ -1,7 +1,9 @@
 # all-in-one-qol-chrome-extension
 
-Fix audio file playing issues in old websites, auto-close Zoom post-attendee page, auto-load fine typographic adjustments
+- Fixes audio file playing issues in old websites
+- auto-close Zoom post-attendee page
+- auto-load fine typographic adjustments to news articles
 
-This is my personal chrome extension, feel free to use if its features align with your usage.
+This is my personal chrome extension, feel free to use it if its features align with your usage.
 
 Eventually, I plan to separate out the features into their own respective extensions.
