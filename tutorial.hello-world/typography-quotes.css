@@ -1,0 +1,46 @@
+    :root { 
+              --open: .33em; /* Open sans*/
+          --hang-nyt: .4584em; /* nyt-imperial, Indy Serif, georgia */
+            --single: .593;
+          --garamond: .403em;
+      --merriweather: .65em;  /* Merriweather */
+      --merriweather: .478em;  /* Merriweather */
+         --brevetext: .403em;  /* BreveText */
+              --hang: var(--hang-nyt);
+    }    
+
+    .hanging-quote {
+      text-indent: calc(var(--hang) * -1);
+    }
+    .single-quote {
+      text-indent: calc(var(--hang) * var(--single) * -1);
+    }
+
+    span.hanging-quote, span.single-quote {
+      display: inline-block;
+    }
+
+    .before-quote {
+      padding-right: var(--hang);
+    }
+    .before-single-quote {
+      padding-right: calc(var(--hang) * var(--single));
+    }
+    
+@-moz-document domain("quantamagazine.org") {
+    :root {
+        --hang: .65em  /* Merriweather */
+    }
+}
+
+@-moz-document url-prefix("https://magazine.hms.harvard.edu/") {
+    :root {
+        --hang: var(--open)  /* Roboto Slab */
+    }
+}
+
+@-moz-document url-prefix("https://www.wired.com/") {
+    :root {
+        --hang: .403em /* BreveText */
+    }
+}

@@ -1,0 +1,74 @@
+{
+  "name": "Quality of Life Enhancements",
+  "description": "Fix audio file playing issues in old websites, auto-close Zoom post-attendee page, auto-load fine typographic adjustments",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "minimum_chrome_version": "102",
+  "omnibox": {
+  "keyword": "api"
+  },
+  "permissions": ["tabs", "activeTab", "storage"],
+  "host_permissions": [
+    "https://*.zoom.us/postattendee?mn=*",
+    "https://zoom.us/postattendee?mn=*"
+  ],
+  "content_scripts": [
+    {
+      "js": ["conversion.js"],
+      "css": ["styles.css"],
+      "matches": [
+        "https://cantonese.ca/*",
+        "https://web.uvic.ca/lancenrd/indonesian/*"
+      ],
+      "all_frames": true
+    },
+    {
+      "js": ["auto-close.js"],
+      "matches": [
+        "https://*.zoom.us/postattendee?mn=*",
+        "https://zoom.us/postattendee?mn=*"
+      ]
+    },
+    {
+      "js": ["typography-quotes.js"],
+      "css": ["typography-quotes.css"],
+      "matches": [
+        "https://www.independent.co.uk/*",
+        "https://www.nytimes.com/*",
+        "https://www.bbc.co.uk/*",
+        "https://www.theguardian.com/*",
+        "https://www.thetimes.co.uk/*",
+        "https://www.telegraph.co.uk/*",
+        "https://www.ft.com/*",
+        "https://www.wsj.com/*",
+        "https://www.economist.com/*",
+        "https://www.reuters.com/*",
+        "https://www.cnn.com/*",
+        "https://www.bbc.com/*",
+        "https://www.quantamagazine.org/*",
+        "https://www.nature.com/*",
+        "https://www.sciencemag.org/*",
+        "https://www.arstechnica.com/*",
+        "https://www.wired.com/*",
+        "https://www.theverge.com/*",
+        "https://www.engadget.com/*",
+        "https://www.gizmodo.com/*",
+        "https://www.techcrunch.com/*",
+        "https://www.cnet.com/*",
+        "https://www.slashdot.org/*",
+        "https://www.huffpost.com/*",
+        "https://magazine.hms.harvard.edu/*",
+        "https://www.theatlantic.com/*"
+      ],
+      "all_frames": true
+    }
+  ]
+}
