@@ -6,6 +6,9 @@
       --merriweather: .65em;  /* Merriweather */
       --merriweather: .478em;  /* Merriweather */
          --brevetext: .403em;  /* BreveText */
+       --publicotext: .534em;  /* PublicoText */
+       --tiempostext: .466em;  /* tiempostext */
+          
               --hang: var(--hang-nyt);
     }    
 

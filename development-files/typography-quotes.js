@@ -28,12 +28,18 @@ const hangQuotes = () => {
     case /.*merriweather.*/i.test(family):
       hang = "merriweather";
     break;
-    case /.*brevetext.*/i.test(family):
+    case /.*breve ?text.*/i.test(family):
       hang = "brevetext";
     break;
+    case /.*Publico ?Text.*/i.test(family):
+      hang = "publicotext";
+    break;
+    case /.*tiempos ?text.*/i.test(family):
+      hang = "tiempostext";
+    break;
     default:
-      hang = "open";
-      console.warn("No matching font family found, using default 'open' hang value.");
+      hang = "garamond";
+      console.warn("No matching font family found, using default 'garamond' hang value.");
   }
 
   document.documentElement.style.setProperty('--hang', `var(--${hang})`);

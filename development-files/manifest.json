@@ -66,7 +66,9 @@
         "https://www.slashdot.org/*",
         "https://www.huffpost.com/*",
         "https://magazine.hms.harvard.edu/*",
-        "https://www.theatlantic.com/*"
+        "https://www.theatlantic.com/*",
+        "https://www.nbcnews.com/*",
+        "https://www.sfchronicle.com/*"
       ],
       "all_frames": true,
       "run_at": "document_idle"
