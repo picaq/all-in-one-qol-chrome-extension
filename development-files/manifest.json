@@ -18,7 +18,8 @@
   "permissions": ["tabs", "activeTab", "storage"],
   "host_permissions": [
     "https://*.zoom.us/postattendee?mn=*",
-    "https://zoom.us/postattendee?mn=*"
+    "https://zoom.us/postattendee?mn=*",
+    "https://*.zoom.us/*#success"
   ],
   "content_scripts": [
     {
@@ -68,7 +69,29 @@
         "https://magazine.hms.harvard.edu/*",
         "https://www.theatlantic.com/*",
         "https://www.nbcnews.com/*",
-        "https://www.sfchronicle.com/*"
+        "https://www.sfchronicle.com/*",
+        "https://www.latimes.com/*",
+        "https://www.chicagotribune.com/*",
+        "https://www.washingtonpost.com/*",
+        "https://www.bloomberg.com/*",
+        "https://www.forbes.com/*",
+        "https://www.businessinsider.com/*",
+        "https://www.vox.com/*",
+        "https://www.politico.com/*",
+        "https://www.npr.org/*",
+        "https://www.buzzfeednews.com/*",
+        "https://www.vice.com/*",
+        "https://www.salon.com/*",
+        "https://www.rollingstone.com/*",
+        "https://www.billboard.com/*",
+        "https://www.pitchfork.com/*",
+        "https://www.nme.com/*",
+        "https://www.spin.com/*",
+        "https://www.stereogum.com/*",
+        "https://www.allmusic.com/*",
+        "https://*.sfgate.com/*",
+        "https://*.sfexaminer.com/*",
+        "https://*.scmp.com/*"
       ],
       "all_frames": true,
       "run_at": "document_idle"

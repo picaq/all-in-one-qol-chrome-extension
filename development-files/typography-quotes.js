@@ -3,6 +3,7 @@ const hangQuotes = () => {
   // ~ 108 letters per line /3 = 36  ;  /4 = 27  ; /5 = 21
   let sliceDepth = 30;
   // sliceDepth = 20;
+  sliceDepth = 15;
   // removes orphans
   const noBreak = s => s.slice(0, s.length-sliceDepth) + s.slice(-sliceDepth).replace(/ /g, ' ');
   let hang;
@@ -37,6 +38,9 @@ const hangQuotes = () => {
     case /.*tiempos ?text.*/i.test(family):
       hang = "tiempostext";
     break;
+    case /.*dm ?sans.*/i.test(family):
+      hang = "dmsans";
+    break;
     default:
       hang = "garamond";
       console.warn("No matching font family found, using default 'garamond' hang value.");
@@ -66,4 +70,4 @@ const hangQuotes = () => {
 setTimeout(() => {
   hangQuotes();
   console.log("Timeout executed, hanging quotes applied!");
-}, 180);
+}, 280);

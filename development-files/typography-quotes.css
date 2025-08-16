@@ -8,7 +8,8 @@
          --brevetext: .403em;  /* BreveText */
        --publicotext: .534em;  /* PublicoText */
        --tiempostext: .466em;  /* tiempostext */
-          
+            --dmsans: .372em;  /* DM Sans */
+        
               --hang: var(--hang-nyt);
     }    
 
