@@ -70,4 +70,4 @@ const hangQuotes = () => {
 setTimeout(() => {
   hangQuotes();
   console.log("Timeout executed, hanging quotes applied!");
-}, 280);
+}, 680);
