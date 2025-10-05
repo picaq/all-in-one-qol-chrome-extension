@@ -91,7 +91,12 @@
         "https://www.allmusic.com/*",
         "https://*.sfgate.com/*",
         "https://*.sfexaminer.com/*",
-        "https://*.scmp.com/*"
+        "https://*.scmp.com/*",
+        "https://gizmodo.com/*",
+        "https://lifehacker.com/*",
+        "https://qz.com/*",
+        "https://*.self.com/*",
+        "https://slate.com/*"
       ],
       "all_frames": true,
       "run_at": "document_idle"

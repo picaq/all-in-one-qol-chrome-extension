@@ -9,6 +9,7 @@
        --publicotext: .534em;  /* PublicoText */
        --tiempostext: .466em;  /* tiempostext */
             --dmsans: .372em;  /* DM Sans */
+          --gtsectra: .326em;  /* GTSectra */
         
               --hang: var(--hang-nyt);
     }    

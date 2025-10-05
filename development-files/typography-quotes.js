@@ -41,6 +41,9 @@ const hangQuotes = () => {
     case /.*dm ?sans.*/i.test(family):
       hang = "dmsans";
     break;
+    case /.*GT ?Sectra.*/i.test(family):
+      hang = "gtsectra";
+    break;
     default:
       hang = "garamond";
       console.warn("No matching font family found, using default 'garamond' hang value.");
