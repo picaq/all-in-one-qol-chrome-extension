@@ -96,7 +96,9 @@
         "https://lifehacker.com/*",
         "https://qz.com/*",
         "https://*.self.com/*",
-        "https://slate.com/*"
+        "https://slate.com/*",
+        "https://sfstandard.com/*",
+        "https://investorsobserver.com/*"
       ],
       "all_frames": true,
       "run_at": "document_idle"
