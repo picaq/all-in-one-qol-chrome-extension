@@ -6,7 +6,7 @@ const closeTab = () => {
 
   let type = 0;
 
-  if (/https:\/\/(.*\.)?zoom\.us\/postattendee\?mn=.*/.test(url)) {
+  if (/https:\/\/(.*\.)?zoom\.us\/postattendee\?mn=.*/.test(url) || /.*getadblock.com.*/.test(url)) {
     type = zoomPostAttendee;
   } else if (/https:\/\/(.*\.)?zoom\.us\/.*#success/.test(url)) {
     type = zoomSuccess;

@@ -10,18 +10,19 @@
        --tiempostext: .466em;  /* tiempostext */
             --dmsans: .372em;  /* DM Sans */
           --gtsectra: .326em;  /* GTSectra */
+ --guardian-egyptian: .548em;  /* GuardianTextEgyptian */
         
               --hang: var(--hang-nyt);
     }    
 
-    .hanging-quote {
+    .hanging-quote, h1 q {
       text-indent: calc(var(--hang) * -1);
     }
     .single-quote {
       text-indent: calc(var(--hang) * var(--single) * -1);
     }
 
-    span.hanging-quote, span.single-quote {
+    span.hanging-quote, span.single-quote, h1 q {
       display: inline-block;
     }
 

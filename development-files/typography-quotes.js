@@ -1,5 +1,7 @@
 const hangQuotes = () => {
   const paragraphs = [...document.querySelectorAll('p')];
+  const blockquotes = [...document.querySelectorAll('blockquote, q')];
+  const headings = [...document.querySelectorAll('h1, h2, h3, h4, h5, h6')];
   // ~ 108 letters per line /3 = 36  ;  /4 = 27  ; /5 = 21
   let sliceDepth = 30;
   // sliceDepth = 20;
@@ -44,6 +46,9 @@ const hangQuotes = () => {
     case /.*GT ?Sectra.*/i.test(family):
       hang = "gtsectra";
     break;
+    case /.*Guardian ?Text ?Egyptian.*/i.test(family):
+      hang = "guardian-egyptian";
+    break;
     default:
       hang = "garamond";
       console.warn("No matching font family found, using default 'garamond' hang value.");
@@ -54,7 +59,7 @@ const hangQuotes = () => {
   const partialHang = new Set(['A', 'o']);
 
   paragraphs.forEach( p => p.innerHTML = noBreak(p.innerHTML));
-  paragraphs.forEach( p => {
+  [...paragraphs, ...headings].forEach( p => {
                       if (p.innerText[0] === "“") { 
                         if (partialHang.has(p.innerText[1])) {
                           p.className = p.className + " single-quote";
@@ -63,10 +68,12 @@ const hangQuotes = () => {
                         }
                       }
                   });
-  paragraphs.forEach( p => p.innerHTML = p.innerHTML
+  [...paragraphs, ...headings].forEach( p => p.innerHTML = p.innerHTML
+                            .trim()
                             .replace(/((\w+[^\w\s]?\s)(?=“\w+))(“\w+)/g, "<span class='before-quote'>$1</span><span class='hanging-quote'>$3</span>")
                             .replace(/((\w+[^\w\s]?\s)(?=‘\w+))(‘\w+)/g, "<span class='before-single-quote'>$1</span><span class='single-quote'>$3</span>")
                     );
+  blockquotes.forEach( bq => bq.className = (bq.className + " hanging-quote").trim() );
 
 }
 

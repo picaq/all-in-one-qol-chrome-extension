@@ -19,7 +19,8 @@
   "host_permissions": [
     "https://*.zoom.us/postattendee?mn=*",
     "https://zoom.us/postattendee?mn=*",
-    "https://*.zoom.us/*#success"
+    "https://*.zoom.us/*#success",
+    "https://getadblock.com/en/update/*"
   ],
   "content_scripts": [
     {
@@ -98,7 +99,16 @@
         "https://*.self.com/*",
         "https://slate.com/*",
         "https://sfstandard.com/*",
-        "https://investorsobserver.com/*"
+        "https://investorsobserver.com/*",
+        "https://apnews.com/*",
+        "https://www.cnbc.com/*",
+        "https://www.cbsnews.com/*",
+        "https://www.abc.net.au/news/*",
+        "https://www.9news.com.au/*",
+        "https://www.smh.com.au/*",
+        "https://www.theage.com.au/*",
+        "https://news.mit.edu/*",
+        "https://www.scientificamerican.com/*"
       ],
       "all_frames": true,
       "run_at": "document_idle"
